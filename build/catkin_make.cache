@@ -1,0 +1,2 @@
+local
+-DCATKIN_DEVEL_PREFIX=/home/falconetti/harita_ws/devel -DCMAKE_INSTALL_PREFIX=/home/falconetti/harita_ws/install -G Unix Makefiles

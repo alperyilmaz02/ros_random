@@ -1,0 +1,8 @@
+prefix=/home/falconetti/harita_ws/devel
+
+Name: local
+Description: Description of local
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

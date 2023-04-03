@@ -1,5 +1,5 @@
-#include "example.hpp"
-#include <iostream>
+#include "example.h"
+
 using namespace std;
 
 //FUNCTIONS DEFINITIONS

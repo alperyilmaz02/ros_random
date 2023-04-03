@@ -1,12 +1,6 @@
-#include "ros/ros.h"
-#include "std_msgs/Float64.h"
-#include "example.hpp"
-#include <sstream>
-#include <time.h>
-//#include <cstdlib>
+#include "example.h"
 
 using namespace std;
-
 
 int main(int argc, char **argv)
 {
@@ -21,7 +15,7 @@ int main(int argc, char **argv)
   
   srand(time(0));
   
-  vector<double> doubleVector(10);   //initialize a double vector
+  vector<double> doubleVector(10);  //initialize a double vector
   vector<int> intVector(10);   //initialize a integer vector
   
   while (ros::ok())

@@ -1,6 +1,15 @@
-#ifndef EXAMPLE_HPP
-#define EXAMPLE_HPP
+
+#ifndef EXAMPLE_H
+#define EXAMPLE_H
+
+#include <iostream>
+#include <cstdlib>
 #include <vector>
+#include <sstream>
+#include <time.h>
+#include "ros/ros.h"
+#include "std_msgs/Float64.h"
+
 
 //FUNCTION DECLERATIONS
 
@@ -15,6 +24,5 @@ void toInt(std::vector <double> const &iVector, std::vector <int> &dVector);
 
 //find smallest and largest numbers, get their arithmetic mean 
 float findIt(std::vector <int> const &iVector);
-
 
 #endif

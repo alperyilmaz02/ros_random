@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+local/CMakeFiles/main.dir/rule:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f CMakeFiles/Makefile2 local/CMakeFiles/main.dir/rule
+.PHONY : local/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: local/CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+# Convenience name for target.
 local/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/falconetti/harita_ws/build && $(MAKE) -f CMakeFiles/Makefile2 local/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : local/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -256,21 +271,6 @@ std_msgs_generate_messages_lisp: local/CMakeFiles/std_msgs_generate_messages_lis
 std_msgs_generate_messages_lisp/fast:
 	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make local/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-local/CMakeFiles/ros_random.dir/rule:
-	cd /home/falconetti/harita_ws/build && $(MAKE) -f CMakeFiles/Makefile2 local/CMakeFiles/ros_random.dir/rule
-.PHONY : local/CMakeFiles/ros_random.dir/rule
-
-# Convenience name for target.
-ros_random: local/CMakeFiles/ros_random.dir/rule
-
-.PHONY : ros_random
-
-# fast build rule for target.
-ros_random/fast:
-	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/ros_random.dir/build.make local/CMakeFiles/ros_random.dir/build
-.PHONY : ros_random/fast
 
 # Convenience name for target.
 local/CMakeFiles/roscpp_generate_messages_py.dir/rule:
@@ -407,32 +407,59 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make local/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
-src/ros_random.o: src/ros_random.cpp.o
+src/example.o: src/example.cpp.o
 
-.PHONY : src/ros_random.o
+.PHONY : src/example.o
 
 # target to build an object file
-src/ros_random.cpp.o:
-	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/ros_random.dir/build.make local/CMakeFiles/ros_random.dir/src/ros_random.cpp.o
-.PHONY : src/ros_random.cpp.o
+src/example.cpp.o:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/example.cpp.o
+.PHONY : src/example.cpp.o
 
-src/ros_random.i: src/ros_random.cpp.i
+src/example.i: src/example.cpp.i
 
-.PHONY : src/ros_random.i
+.PHONY : src/example.i
 
 # target to preprocess a source file
-src/ros_random.cpp.i:
-	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/ros_random.dir/build.make local/CMakeFiles/ros_random.dir/src/ros_random.cpp.i
-.PHONY : src/ros_random.cpp.i
+src/example.cpp.i:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/example.cpp.i
+.PHONY : src/example.cpp.i
 
-src/ros_random.s: src/ros_random.cpp.s
+src/example.s: src/example.cpp.s
 
-.PHONY : src/ros_random.s
+.PHONY : src/example.s
 
 # target to generate assembly for a file
-src/ros_random.cpp.s:
-	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/ros_random.dir/build.make local/CMakeFiles/ros_random.dir/src/ros_random.cpp.s
-.PHONY : src/ros_random.cpp.s
+src/example.cpp.s:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/example.cpp.s
+.PHONY : src/example.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /home/falconetti/harita_ws/build && $(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -444,6 +471,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... main"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
@@ -451,7 +479,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... list_install_components"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... ros_random"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... install"
 	@echo "... std_msgs_generate_messages_eus"
@@ -463,9 +490,12 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... src/ros_random.o"
-	@echo "... src/ros_random.i"
-	@echo "... src/ros_random.s"
+	@echo "... src/example.o"
+	@echo "... src/example.i"
+	@echo "... src/example.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

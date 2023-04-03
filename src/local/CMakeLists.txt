@@ -205,6 +205,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(ros_random src/ros_random.cpp)
-target_link_libraries(ros_random ${catkin_LIBRARIES})
-#add_dependencies(ros_random beginner_tutorials_generate_messages_cpp)
+add_executable(main src/main.cpp src/example.cpp)
+target_link_libraries(main ${catkin_LIBRARIES})
+#add_dependencies(main ${${local}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})

@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f local/CMakeFiles/main.dir/build.make local/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -361,19 +374,6 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f local/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make local/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named ros_random
-
-# Build rule for target.
-ros_random: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ros_random
-.PHONY : ros_random
-
-# fast build rule for target.
-ros_random/fast:
-	$(MAKE) -f local/CMakeFiles/ros_random.dir/build.make local/CMakeFiles/ros_random.dir/build
-.PHONY : ros_random/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -514,13 +514,13 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... main"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... ros_random"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_nodejs"

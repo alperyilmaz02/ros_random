@@ -1,14 +1,10 @@
 #include "example.h"
 
-using namespace std;
-
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "talker");
-
+  ros::init(argc, argv, "main");
   ros::NodeHandle nodeHandler;
-
-  //parameters initializations that will be taken from yaml file
+  
   int frekans;
   std::string topicName;
 
@@ -16,17 +12,16 @@ int main(int argc, char **argv)
   nodeHandler.getParam("frekans", frekans);
   nodeHandler.getParam("topicName", topicName);
 
-
+  
   ros::Publisher chatter_pub = nodeHandler.advertise<std_msgs::Float64>(topicName, 1000);
-
   ros::Rate loop_rate(frekans);
-  
-  srand(time(0));
-  
+
+
   vector<double> doubleVector(10);  //initialize a double vector
   vector<int> intVector(10);   //initialize a integer vector
-  
 
+
+  srand(time(0));
   
   while (ros::ok())
 {

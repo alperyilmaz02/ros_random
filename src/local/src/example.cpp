@@ -1,7 +1,5 @@
 #include "example.h"
 
-using namespace std;
-
 //FUNCTIONS DEFINITIONS
 
 void dprint(std::vector <double> const &dVector) {

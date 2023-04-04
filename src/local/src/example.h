@@ -7,8 +7,9 @@
 #include <sstream>
 #include <time.h>
 #include "ros/ros.h"
-#include "std_msgs/Float64.h"
+#include "std_msgs/Float64.h"  
 
+using namespace std;
 
 //FUNCTION DECLERATIONS
 

@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/falconetti/harita_ws/src/local/src/example.cpp
-example.h
-/home/falconetti/harita_ws/src/local/src/example.h
-
 /home/falconetti/harita_ws/src/local/src/example.h
 iostream
 -
@@ -25,6 +21,10 @@ ros/ros.h
 /home/falconetti/harita_ws/src/local/src/ros/ros.h
 std_msgs/Float64.h
 /home/falconetti/harita_ws/src/local/src/std_msgs/Float64.h
+
+/home/falconetti/harita_ws/src/local/src/main.cpp
+example.h
+/home/falconetti/harita_ws/src/local/src/example.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

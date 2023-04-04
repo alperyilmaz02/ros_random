@@ -4,19 +4,29 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
- 
   ros::init(argc, argv, "talker");
 
   ros::NodeHandle nodeHandler;
 
-  ros::Publisher chatter_pub = nodeHandler.advertise<std_msgs::Float64>("bias", 1000);
+  //parameters initializations that will be taken from yaml file
+  int frekans;
+  std::string topicName;
 
-  ros::Rate loop_rate(10);
+  // Get the parameters from the parameter server
+  nodeHandler.getParam("frekans", frekans);
+  nodeHandler.getParam("topicName", topicName);
+
+
+  ros::Publisher chatter_pub = nodeHandler.advertise<std_msgs::Float64>(topicName, 1000);
+
+  ros::Rate loop_rate(frekans);
   
   srand(time(0));
   
   vector<double> doubleVector(10);  //initialize a double vector
   vector<int> intVector(10);   //initialize a integer vector
+  
+
   
   while (ros::ok())
 {
@@ -31,6 +41,7 @@ int main(int argc, char **argv)
     std_msgs::Float64 msg; //float64 msg type object
     msg.data = arith;
     ROS_INFO("%f", msg.data);  // This will print the message value in the terminal
+    //ROS_INFO("%d",frekans);
     chatter_pub.publish(msg);
     ros::spinOnce();
     loop_rate.sleep();

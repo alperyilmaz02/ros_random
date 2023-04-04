@@ -30,6 +30,7 @@ int main(int argc, char **argv)
   
   while (ros::ok())
 {
+
     for (int i = 0; i < 10; i++)
       doubleVector[i] = (double)rand() / RAND_MAX * 99 + 1; //generates a double value and fills vector with this values
   
@@ -41,7 +42,6 @@ int main(int argc, char **argv)
     std_msgs::Float64 msg; //float64 msg type object
     msg.data = arith;
     ROS_INFO("%f", msg.data);  // This will print the message value in the terminal
-    //ROS_INFO("%d",frekans);
     chatter_pub.publish(msg);
     ros::spinOnce();
     loop_rate.sleep();

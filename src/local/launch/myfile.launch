@@ -1,5 +1,5 @@
 <launch>
   <rosparam file="$(find local)/config/para.yaml" command="load"/>
 
-  <node name="main" pkg="local" type="talker" />
+  <node name="aaa" pkg="local" type="main"  output = "screen"/>
 </launch>
